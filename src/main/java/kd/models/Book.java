@@ -107,6 +107,11 @@ public class Book implements Comparable<Book> {
     }
 
     /**
+     * This method overrides the default toString method provided by the Object
+     * class to ensure the values are showcased when the object is printed. A
+     * conditional statement is used to only show the borrower if the book is
+     * currently on loan.
+     * 
      * @see java.lang.Object#toString()
      */
     @Override
@@ -119,4 +124,28 @@ public class Book implements Comparable<Book> {
                 (borrower != null ? " | borrower: " + borrower.getFirstName() + " " + borrower.getSurname() : ""));
     }
 
+    /**
+     * This method overrides the default equals method provided by the Object class
+     * so that the program perceives books with the same name to be the same Book
+     * and not allow multiple books with the same name. This keeps the program
+     * simple and allows for the main focus to be on the generic SortedArrayList
+     * class and the Comparable interface.
+     * 
+     * @see java.lang.Object#equals(java.lang.Object)
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+
+        if (!(obj instanceof Book))
+            return false;
+
+        final Book user = (Book) obj;
+        return title.equals(user.title)
+                && authorFirstName.equals(user.authorFirstName)
+                && authorSurname.equals(user.authorSurname)
+                && onLoan == user.onLoan
+                && borrower.equals(user.borrower);
+    }
 }

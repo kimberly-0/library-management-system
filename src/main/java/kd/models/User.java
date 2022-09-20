@@ -85,6 +85,9 @@ public class User implements Comparable<User> {
     }
 
     /**
+     * This method overrides the default toString method provided by the Object
+     * class to ensure the values are showcased when the object is printed.
+     * 
      * @see java.lang.Object#toString()
      */
     @Override
@@ -93,6 +96,29 @@ public class User implements Comparable<User> {
                 "User -> ",
                 "name: ", firstName, surname,
                 " | number of books: ", numOfBooks);
+    }
+
+    /**
+     * This method overrides the default equals method provided by the Object class
+     * so that the program perceives users with the same name to be the same User
+     * and not allow multiple users with the same name. This keeps the program
+     * simple and allows for the main focus to be on the generic SortedArrayList
+     * class and the Comparable interface.
+     * 
+     * @see java.lang.Object#equals(java.lang.Object)
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+
+        if (!(obj instanceof User))
+            return false;
+
+        final User user = (User) obj;
+        return firstName.equals(user.firstName)
+                && surname.equals(user.surname)
+                && numOfBooks == user.numOfBooks;
     }
 
 }
