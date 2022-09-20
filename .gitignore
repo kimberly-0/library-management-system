@@ -1,0 +1,8 @@
+## Mac OS
+.DS_Store
+
+## Output folder
+target/
+
+## Folder for testing
+src/test
