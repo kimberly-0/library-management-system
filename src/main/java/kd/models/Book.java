@@ -106,8 +106,6 @@ public class Book implements Comparable<Book> {
             return 0;
     }
 
-    // TODO: equals method ???????
-
     /**
      * @see java.lang.Object#toString()
      */

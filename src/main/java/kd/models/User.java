@@ -84,8 +84,6 @@ public class User implements Comparable<User> {
             return 0;
     }
 
-    // TODO: equals method ???????
-
     /**
      * @see java.lang.Object#toString()
      */
