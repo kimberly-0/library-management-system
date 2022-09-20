@@ -161,6 +161,6 @@ public class Book implements Comparable<Book> {
                 && authorFirstName.equals(user.authorFirstName)
                 && authorSurname.equals(user.authorSurname)
                 && onLoan == user.onLoan
-                && borrower.equals(user.borrower);
+                && (borrower == null ? borrower == user.borrower : borrower.equals(user.borrower));
     }
 }
