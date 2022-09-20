@@ -14,20 +14,35 @@ public class Book implements Comparable<Book> {
     private User borrower;
 
     /**
-     * This constructor creates a new Book without a title, author, loan status or
-     * borrower
+     * This constructor creates a new Book with a set title and author, and the loan
+     * status will be false by default with no borrower
+     * 
+     * @param title           The title of the book
+     * @param authorFirstName The first name of the author of the book
+     * @param authorSurname   The surname of the author of the book
      */
-    public Book() {
-        this.title = "";
-        this.authorFirstName = "";
-        this.authorSurname = "";
+    public Book(String title, String authorFirstName, String authorSurname) {
+        this.title = title;
+        this.authorFirstName = authorFirstName;
+        this.authorSurname = authorSurname;
         this.onLoan = false;
         this.borrower = null;
     }
 
     /**
+     * 
      * This constructor creates a new Book with a set title, author, loan status and
      * borrower
+     * 
+     * @param title           The title of the book
+     * @param authorFirstName The first name of the author of the book
+     * @param authorSurname   The surname of the author of the book
+     * @param onLoan          The loan status of the book
+     *                        <code>true</code> if the book is currently on loan
+     *                        <code>false</code> if the book is not currently on
+     *                        loan
+     * @param borrower        The borrower of the book if the book is on loan
+     *                        <code>null</code> if the book is not on loan
      */
     public Book(String title, String authorFirstName, String authorSurname, boolean onLoan, User borrower) {
         this.title = title;

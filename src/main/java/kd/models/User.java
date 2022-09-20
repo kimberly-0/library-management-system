@@ -13,12 +13,15 @@ public class User implements Comparable<User> {
     private Integer numOfBooks;
 
     /**
-     * This constructor creates a new User without a name or number of books
-     * borrowed
+     * This constructor creates a new User with a set first name and surname, and
+     * the number of books borrowed will be 0 by default
+     * 
+     * @param firstName The first name of the user
+     * @param surname   The surname of the user
      */
-    public User() {
-        this.firstName = "";
-        this.surname = "";
+    public User(String firstName, String surname) {
+        this.firstName = firstName;
+        this.surname = surname;
         this.numOfBooks = 0;
     }
 
