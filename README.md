@@ -8,6 +8,8 @@ It was created as part of the *Software Development Techniques and Tools* module
 
 Click [here](https://youtu.be/ekNoFb5rE1o) for a video preview of the program on YouTube
 
+<img src="https://github.com/kidijkmans/library-management-system/blob/main/preview.png" width="500">
+
 ## Tools and technologies used
 
 - Programming language: **Java 17**
