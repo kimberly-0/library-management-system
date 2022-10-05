@@ -4,6 +4,10 @@ This project is an interactive library management system with a command line int
 
 It was created as part of the *Software Development Techniques and Tools* module of the MSc Computer Science course at Newcastle University in December 2020 but has been revised and updated in September 2022.
 
+## Preview
+
+Click [here](https://youtu.be/ekNoFb5rE1o) for a video preview of the program on YouTube
+
 ## Tools and technologies used
 
 - Programming language: **Java 17**
