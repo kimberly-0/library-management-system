@@ -10,8 +10,6 @@ import kd.models.*;
  * The ImportFile class is responsible for importing books and users from a
  * file.
  * 
- * Updated on 19/09/2022
- * 
  * @author Kimberly Dijkmans
  */
 public class ImportFile {
@@ -65,9 +63,7 @@ public class ImportFile {
      * User objects from the information and adds it to the records
      */
     private void parser(ArrayList<String> records, IO io) {
-        /*
-         * Retrieve numbers of books and users from file
-         */
+
         int numOfBooks = Integer.parseInt(records.get(0));
         int numOfUsers = Integer.parseInt(records.get((numOfBooks * 2) + 1));
 
@@ -83,9 +79,6 @@ public class ImportFile {
             io.addBook(new Book(title, authorFirstName, authorSurname, false, null));
         }
 
-        /*
-         * ... ...
-         */
         int currentLine = (numOfBooks * 2) + 2; // set current line
 
         /*

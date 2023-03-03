@@ -3,8 +3,6 @@ package kd.models;
 /**
  * The Book class is responsible for creating an Book object.
  * 
- * Updated on 19/09/2022
- * 
  * @author Kimberly Dijkmans
  */
 public class Book implements Comparable<Book> {
@@ -13,14 +11,6 @@ public class Book implements Comparable<Book> {
     private boolean onLoan;
     private User borrower;
 
-    /**
-     * This constructor creates a new Book with a set title and author, and the loan
-     * status will be false by default with no borrower
-     * 
-     * @param title           The title of the book
-     * @param authorFirstName The first name of the author of the book
-     * @param authorSurname   The surname of the author of the book
-     */
     public Book(String title, String authorFirstName, String authorSurname) {
         this.title = title;
         this.authorFirstName = authorFirstName;
@@ -29,21 +19,6 @@ public class Book implements Comparable<Book> {
         this.borrower = null;
     }
 
-    /**
-     * 
-     * This constructor creates a new Book with a set title, author, loan status and
-     * borrower
-     * 
-     * @param title           The title of the book
-     * @param authorFirstName The first name of the author of the book
-     * @param authorSurname   The surname of the author of the book
-     * @param onLoan          The loan status of the book
-     *                        <code>true</code> if the book is currently on loan
-     *                        <code>false</code> if the book is not currently on
-     *                        loan
-     * @param borrower        The borrower of the book if the book is on loan
-     *                        <code>null</code> if the book is not on loan
-     */
     public Book(String title, String authorFirstName, String authorSurname, boolean onLoan, User borrower) {
         this.title = title;
         this.authorFirstName = authorFirstName;
@@ -52,57 +27,30 @@ public class Book implements Comparable<Book> {
         this.borrower = borrower;
     }
 
-    /**
-     * @return title of the book
-     */
     public String getTitle() {
         return title;
     }
 
-    /**
-     * @return first name of the author of the book
-     */
     public String getAuthorFirstName() {
         return authorFirstName;
     }
 
-    /**
-     * @return surname of the author of the book
-     */
     public String getAuthorSurname() {
         return authorSurname;
     }
 
-    /**
-     * @return <code>true</code> if book is on loan
-     *         <code>false</code> if book is not on loan
-     */
     public boolean isOnLoan() {
         return onLoan;
     }
 
-    /**
-     * @return current borrower of the book
-     */
     public User getBorrower() {
         return borrower;
     }
 
-    /**
-     * This method sets the loan status of the book
-     * 
-     * @param b <code>true</code> if book is on loan
-     *          <code>false</code> if book is not on loan
-     */
     public void setOnLoan(boolean b) {
         this.onLoan = b;
     }
 
-    /**
-     * This method sets the current borrower of the book
-     * 
-     * @param u The user who is currently borrowing the book
-     */
     public void setBorrower(User u) {
         this.borrower = u;
     }

@@ -10,8 +10,6 @@ import java.util.ArrayList;
  * ArrayList<E> classes and the elements in the SortedArrayList (in this case
  * Users or Books) must implement the Comparable<E> interface.
  * 
- * Updated on 19/09/2022
- * 
  * @author Kimberly Dijkmans
  */
 public class SortedArrayList<E extends Comparable<E>> extends ArrayList<E> {
@@ -23,9 +21,6 @@ public class SortedArrayList<E extends Comparable<E>> extends ArrayList<E> {
      * @param newElement The new element to insert into the list
      */
     public void insert(E newElement) {
-
-        // System.out.println("");
-        // System.out.println("-------- To insert: " + newElement + " --------");
 
         /*
          * If array is empty, insert element
@@ -47,15 +42,7 @@ public class SortedArrayList<E extends Comparable<E>> extends ArrayList<E> {
              * element it is being compared to, or returns 0 if they are equal
              */
             if (newElement.compareTo(this.get(i)) <= 0) {
-
                 this.add(i, newElement);
-
-                // System.out.println("");
-                // System.out.println("Final array after inserting new element");
-                // this.forEach(x -> {
-                // System.out.println(x);
-                // });
-
                 return;
             }
         }
@@ -67,12 +54,5 @@ public class SortedArrayList<E extends Comparable<E>> extends ArrayList<E> {
          */
         this.add(newElement);
 
-        // System.out.println("");
-        // System.out.println("Final array after inserting new element");
-        // this.forEach(x -> {
-        // System.out.println(x);
-        // });
-
     }
-
 }

@@ -14,8 +14,6 @@ import kd.models.*;
  * The IO class manages the input and output of the program, i.e. the command
  * line interface menus, the user's response, and the printed results.
  * 
- * Updated on 20/09/2022
- * 
  * @author Kimberly Dijkmans
  */
 public class IO {
@@ -23,15 +21,6 @@ public class IO {
     private SortedArrayList<Book> books = new SortedArrayList<>();
     private SortedArrayList<User> users = new SortedArrayList<>();
 
-    /**
-     * This method adds a Book to the list of books if it doesn't
-     * already exist and returns a boolean indicating whether adding it to the list
-     * was successful
-     * 
-     * @param book The book to add to the list of books
-     * @return <code>true</code> if adding to the list was successful
-     *         <code>false</code> if adding to the list was unsuccessful
-     */
     boolean addBook(Book book) {
         for (Book u : books) {
             if (u.equals(book))
@@ -41,15 +30,6 @@ public class IO {
         return true;
     }
 
-    /**
-     * This method adds a User to the list of users if it doesn't
-     * already exist and returns a boolean indicating whether adding it to the list
-     * was successful
-     * 
-     * @param user The user to add to the list of users
-     * @return <code>true</code> if adding to the list was successful
-     *         <code>false</code> if adding to the list was unsuccessful
-     */
     boolean addUser(User user) {
         for (User u : users) {
             if (u.equals(user))
@@ -59,25 +39,7 @@ public class IO {
         return true;
     }
 
-    /*
-     * This method prints the menu options to the command line interface
-     */
-    private static void printMenu() {
-        System.out.printf("%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n",
-                "--------- MENU ---------",
-                "f - finish",
-                "b - list all books",
-                "u - list all users",
-                "i - issue a book",
-                "r - return a book",
-                "------------------------",
-                "Type a letter and press Enter");
-    }
-
-    /*
-     * This method displays and handles the command line menu
-     */
-    private void runMenu(PrintWriter outFile) {
+    public void runMenu(PrintWriter outFile) {
         Scanner scanner = new Scanner(System.in);
         boolean quit = false;
         while (!quit) {
@@ -111,24 +73,29 @@ public class IO {
         }
     }
 
-    /*
-     * This method prints all items to the command line interface (in this case
-     * books or users)
-     */
+    private static void printMenu() {
+        System.out.printf("%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n",
+                "--------- MENU ---------",
+                "f - finish",
+                "b - list all books",
+                "u - list all users",
+                "i - issue a book",
+                "r - return a book",
+                "------------------------",
+                "Type a letter and press Enter");
+    }
+
     private <E extends Comparable<E>> void listItems(SortedArrayList<E> e) {
         System.out.print(System.lineSeparator());
         if (e.size() > 0) {
             for (E elem : e)
                 System.out.println(elem);
         } else {
-            System.out.println("No items to list");
+            System.out.println("No items found");
         }
     }
 
-    /*
-     * This method issues a book to a user
-     */
-    private void issueBook(Scanner scanner, PrintWriter outFile) {
+    void issueBook(Scanner scanner, PrintWriter outFile) {
         System.out.printf("%n%s%n%s%n", "ISSUE A BOOK", "--------------");
 
         User selectedUser = validateUser(scanner);
@@ -151,13 +118,11 @@ public class IO {
 
         } else { // User already has 3 or more books on loan
             System.out.println(selectedUser.getFirstName() + " " + selectedUser.getSurname() + " already has " +
-                    selectedUser.getNumOfBooks() + " on loan. The maximum allowed is 3. Please return a book first.");
+                    selectedUser.getNumOfBooks()
+                    + " books on loan. The maximum allowed is 3. Please return a book first.");
         }
     }
 
-    /*
-     * This method allows a user to return a book
-     */
     private void returnBook(Scanner scanner) {
         System.out.printf("%n%s%n%s%n", "RETURN A BOOK", "--------------");
 
@@ -178,9 +143,6 @@ public class IO {
         }
     }
 
-    /*
-     * This method validates a user
-     */
     private User validateUser(Scanner scanner) {
         System.out.println("Enter the user's first name:");
         String userFirstName = scanner.nextLine().trim();
@@ -209,9 +171,6 @@ public class IO {
         return selectedUser;
     }
 
-    /*
-     * This method validates a book
-     */
     private Book validateBook(Scanner scanner) {
         System.out.println("Enter the book's title:");
         String bookTitle = scanner.nextLine().trim();
