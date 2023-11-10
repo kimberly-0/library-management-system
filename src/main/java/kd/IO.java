@@ -14,7 +14,7 @@ import kd.models.*;
  * The IO class manages the input and output of the program, i.e. the command
  * line interface menus, the user's response, and the printed results.
  * 
- * @author Kimberly Dijkmans
+ * @author Kimberly
  */
 public class IO {
 

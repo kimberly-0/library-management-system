@@ -10,7 +10,7 @@ import kd.models.*;
  * The ImportFile class is responsible for importing books and users from a
  * file.
  * 
- * @author Kimberly Dijkmans
+ * @author Kimberly
  */
 public class ImportFile {
 

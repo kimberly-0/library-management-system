@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * ArrayList<E> classes and the elements in the SortedArrayList (in this case
  * Users or Books) must implement the Comparable<E> interface.
  * 
- * @author Kimberly Dijkmans
+ * @author Kimberly
  */
 public class SortedArrayList<E extends Comparable<E>> extends ArrayList<E> {
 

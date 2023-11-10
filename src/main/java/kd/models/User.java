@@ -3,7 +3,7 @@ package kd.models;
 /**
  * The User class is responsible for creating an User object.
  * 
- * @author Kimberly Dijkmans
+ * @author Kimberly
  */
 public class User implements Comparable<User> {
 

@@ -3,7 +3,7 @@ package kd.models;
 /**
  * The Book class is responsible for creating an Book object.
  * 
- * @author Kimberly Dijkmans
+ * @author Kimberly
  */
 public class Book implements Comparable<Book> {
 
