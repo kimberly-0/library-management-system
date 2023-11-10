@@ -3,3 +3,7 @@
 
 ## Output folder
 target/
+
+## IDE
+.vscode
+.idea
