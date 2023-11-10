@@ -2,13 +2,11 @@
 
 This project is an interactive library management system with a command line interface. The program enables the importing of books and users from a file, and enables the system user to issue and return books. [^1].
 
-It was created as part of the *Software Development Techniques and Tools* module of the MSc Computer Science course at Newcastle University in December 2020 but has been revised and updated in September 2022.
-
 ## Preview
 
 Click [here](https://youtu.be/ekNoFb5rE1o) for a video preview of the program on YouTube
 
-<img src="https://github.com/kidijkmans/library-management-system/blob/main/preview.png" width="500">
+<img src="https://github.com/kimberly-0/library-management-system/blob/main/preview.png" width="500">
 
 ## Tools and technologies used
 
@@ -32,7 +30,7 @@ The code has been commented to further explain the purpose of the classes and me
 
 2. Download the code in a ZIP file or clone the repository
 
-``` $ git clone https://github.com/kidijkmans/library-management-system.git ```
+``` $ git clone https://github.com/kimberly-0/library-management-system.git ```
 
 3. Open `IO.java` (located in *src/main/java/kd*) in an IDE
 
